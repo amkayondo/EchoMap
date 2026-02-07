@@ -5,30 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EchoMap - Live Ephemeral Pings</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         darkMode: 'class',
         theme: {
           extend: {
             fontFamily: {
-              sans: ['"Segoe UI"', 'Inter', 'sans-serif'],
+              sans: ['Inter', 'sans-serif'],
             },
             colors: {
-              metro: {
-                bg: '#111111',
-                card: '#1a1a1a',
-                border: '#333333',
-                cyan: '#00BCF2',
-                magenta: '#D13438',
-                lime: '#A4C400',
-                teal: '#00B294',
-                purple: '#881798',
+              app: {
+                bg: '#000000',
+                card: '#121212',
+                cardHover: '#1A1A1A',
+                accent: '#FFFFFF',
+                subtext: '#9CA3AF',
+                border: '#27272a',
               }
             },
+            borderRadius: {
+              '3xl': '1.5rem',
+              '4xl': '2rem',
+            },
             animation: {
-              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-              'ping-slow': 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite',
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
             }
           }
         }
@@ -39,18 +40,10 @@
         background-color: #000000;
         color: #ffffff;
       }
-      /* Custom scrollbar for Metro feel */
+      /* Hide scrollbar for clean UI */
       ::-webkit-scrollbar {
-        width: 6px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #111;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #444;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #666;
+        width: 0px;
+        background: transparent;
       }
     </style>
   <script type="importmap">
