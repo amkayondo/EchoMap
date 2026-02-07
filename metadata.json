@@ -1,0 +1,7 @@
+{
+  "name": "EchoMap",
+  "description": "A privacy-first, ephemeral global ping map allowing users to temporarily broadcast their location.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
