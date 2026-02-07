@@ -26,7 +26,7 @@ const WorldMap: React.FC<WorldMapProps> = ({ pings }) => {
         <Graticule stroke="#1a1a1a" />
         <Geographies geography={MAP_TOPOLOGY_URL}>
           {({ geographies }) =>
-            geographies.map((geo) => (
+            Array.isArray(geographies) && geographies.map((geo) => (
               <Geography
                 key={geo.rsmKey}
                 geography={geo}
